@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uz" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>San uchun kichkina sov'ga ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- ambient floating hearts -->
+<div class="hearts-bg" id="heartsBg" aria-hidden="true"></div>
+
+<div class="phone">
+
+  <!-- progress dots -->
+  <div class="progress" id="progress" style="display:none;">
+    <span class="dot" data-i="0"></span>
+    <span class="dot" data-i="1"></span>
+    <span class="dot" data-i="2"></span>
+    <span class="dot" data-i="3"></span>
+    <span class="dot" data-i="4"></span>
+  </div>
+
+  <!-- SCREEN 0: INTRO -->
+  <section class="screen active" id="screen-intro">
+    <div class="card intro-card">
+      <p class="eyebrow">san uchun, <span th:text="${ismi}">Sevgilim</span> <span class="env">💌</span></p>
+      <h1 class="title">Kichkina sovg'a —<br>xursand bo'lishing uchun</h1>
+      <p class="subtitle">Bir nechta savolga javob ber… lekin ehtiyot bo'l — ba'zi tugmalar injiq 😏</p>
+      <button class="btn btn-primary" id="startBtn">Boshladik <span class="sparkle">✨</span></button>
+    </div>
+  </section>
+
+  <!-- SCREENS 1-5: QUESTIONS injected by JS -->
+  <section class="screen" id="screen-quiz">
+    <div class="card quiz-card">
+      <p class="q-count" id="qCount">Savol 1 / 5</p>
+      <h2 class="question" id="qText"></h2>
+      <div class="options" id="qOptions"></div>
+    </div>
+  </section>
+
+  <!-- SCREEN 6: RECAP -->
+  <section class="screen" id="screen-recap">
+    <div class="card recap-card">
+      <h2 class="recap-title">Javoblaring shu yerda ✨</h2>
+      <div class="recap-list" id="recapList"></div>
+      <button class="btn btn-primary" id="continueBtn">Davom etish <span class="sparkle">💗</span></button>
+    </div>
+  </section>
+
+  <!-- SCREEN 7: FINAL -->
+  <section class="screen" id="screen-final">
+    <div class="card final-card">
+      <div class="final-lines" id="finalLines">
+        <p class="final-line">San uchun kichkina sovg'a tayyorladim ❤️</p>
+        <p class="final-line">Shunchaki seni tabassum qilishingni xohladim 🙂</p>
+        <p class="final-line">Savollarga javob berganing uchun rahmat 😊</p>
+        <p class="final-line">Yana bir narsani bilishingni xohlayman...</p>
+        <p class="final-line final-big">Sani qattiq sevaman Zeboyim❤️</p>
+      </div>
+      <div class="big-heart" id="bigHeart">❤️</div>
+    </div>
+  </section>
+
+</div>
+
+<script th:src="@{/js/quiz.js}"></script>
+</body>
+</html>
