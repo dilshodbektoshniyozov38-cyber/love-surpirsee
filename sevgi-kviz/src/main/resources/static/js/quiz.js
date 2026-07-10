@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  const teaseMessages = ["Yo'q endi 😤", "Bunday bo'lmaydi 🙅‍♀️", "Meni ranjitasan-ku 🥺"];
+  const teaseMessages = ["Yo'q😤", "Xa mayli 🙅‍♀️", "Aniqmi😏"];
 
   const answers = new Array(questions.length).fill(null);
 
